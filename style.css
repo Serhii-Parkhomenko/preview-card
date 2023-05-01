@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  max-width: 400px;
+  padding: 1.3rem;
+  border-radius: 16px;
+  background-color: hsl(216, 50%, 16%);
+}
+
+.card > :not(:first-child) {
+  margin-top: 1.2rem;
+}
+
+.card__product__img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card__img {
+  position: relative;
+  display: flex;
+}
+
+
+.img__overlay {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.374);
+  border-radius: 8px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.card__img:hover {
+  cursor: pointer;
+}
+
+.card__img:hover .img__overlay {
+  opacity: 1;
+}
+
+.card h1,
+.card__creator strong {
+  color: white;
+}
+
+.card h1:hover,
+.card__creator strong:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.card p {
+  line-height: 1.5rem;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info__eth {
+  color: hsl(178, 100%, 50%);
+  display: flex;
+  align-items: center;
+}
+
+.info__eth img {
+  margin-right: 0.5rem;
+}
+
+.info__days__left {
+  display: flex;
+  align-items: center;
+}
+
+.info__days__left img {
+  margin-right: 0.5rem;
+}
+
+hr {
+  border: 1px solid hsl(215, 32%, 27%);
+}
+
+.card__creator {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.creator__avatar {
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 1px;
+  margin-right: 1.5rem;
+  display: grflex;
+  align-items: center;
+  justify-content: center;
+}
+
+.creator__avatar__img {
+  width: 100%;
+}
+
+.card__creator strong {
+  margin-left: .5ch;
+  font-weight: 300;
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 16px;
+  }
+  .card {
+    max-width: 85%;
+    padding: 1rem;
+  }
+
+}
